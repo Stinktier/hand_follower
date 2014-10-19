@@ -29,8 +29,8 @@
 <node pkg="hand_follower" type="hand_tracker" name="hand_tracker" output="screen" >
 </node>
 <node pkg="hand_follower" type="hand_controller" name="hand_controller" output="screen">
-	<param name="speedParameter" value="1" />
-	<param name="angularParameter" value="5" />
+	<param name="speedP" value="1" />
+	<param name="angularP" value="5" />
 	<param name="Ytarget" value="0" />
 	<param name="Xtarget" value="0.5" />
 </node>

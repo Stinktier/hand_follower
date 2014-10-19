@@ -23,18 +23,23 @@ class hand_controller{
 		angel=0;
 		speedparameter = 1;
 		angularparameter= 5;
-		if(n.hasParam("speedParamter")){
-			n.getParam("speedParameter",speedparameter);
-		}
-		if(n.hasParam("angularParamter")){
-			n.getParam("angularParameter",angularparameter);
-		}
 		if(n.hasParam("Xtarget")){
 			n.getParam("Xtarget",aimed[0]);
+			ROS_INFO("Xtarget was set");
 		}
 		if(n.hasParam("Ytarget")){
 			n.getParam("Ytarget",aimed[1]);
+			ROS_INFO("Ytarget was set");
 		}
+		if(n.hasParam("speedP")){
+			n.getParam("speedP",speedparameter);
+			ROS_INFO("Speedparameter was set");
+		}
+		if(n.hasParam("angularP")){
+			n.getParam("angularP",angularparameter);
+			ROS_INFO("angularParameter was set");
+		}
+
 	}
     void call(){
 		error[0]= aimed[0] - current[0];
